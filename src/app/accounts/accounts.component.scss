@@ -1,0 +1,20 @@
+.table-wrapper {
+  max-height: 65vh;
+  overflow-y: scroll;
+  margin-bottom: 16px;
+}
+
+.application {
+  & img {
+    height: 24px;
+    margin-right: 4px;
+  }
+}
+
+.copy {
+  cursor: pointer;
+
+  &:hover {
+    background-color: azure;
+  }
+}

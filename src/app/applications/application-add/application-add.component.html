@@ -1,0 +1,31 @@
+<form [formGroup]="applicationForm">
+  <div class="form-group col-xs-6">
+    <label for="username">Icon</label>
+    <input
+      type="file"
+      id="icon"
+      formControlName="icon"
+      class="form-control"
+      (change)="onFileSelected($event)"
+    />
+  </div>
+
+  <div class="form-group col-xs-6">
+    <label for="username">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control" />
+  </div>
+</form>
+
+<button
+  [disabled]="applicationForm.invalid"
+  mat-raised-button
+  color="primary"
+  class="save-button"
+  (click)="onSaveApplication()"
+>
+  <mat-icon>save</mat-icon> <span> Save application</span>
+</button>
+
+<button mat-raised-button (click)="onCancel()">
+  <mat-icon>cancel</mat-icon> <span> Cancel</span>
+</button>

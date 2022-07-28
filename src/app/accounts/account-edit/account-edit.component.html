@@ -1,0 +1,56 @@
+<form [formGroup]="accountForm">
+  <mat-form-field appearance="fill" class="col-xs-3">
+    <mat-label>Choose an application</mat-label>
+    <mat-select formControlName="applicationName">
+      <mat-option
+        *ngFor="let application of applications"
+        value="{{ application.name }}"
+        >{{ application.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <div class="form-group col-xs-3">
+    <label for="username">Username</label>
+    <input
+      type="username"
+      id="username"
+      formControlName="username"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group col-xs-3">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group col-xs-3">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+      class="form-control"
+    />
+  </div>
+</form>
+
+<button
+  [disabled]="accountForm.invalid"
+  mat-raised-button
+  color="primary"
+  class="save-button"
+  (click)="onSaveAccount()"
+>
+  <mat-icon>save</mat-icon> <span> Save account</span>
+</button>
+
+<button mat-raised-button (click)="onCancel()">
+  <mat-icon>cancel</mat-icon> <span> Cancel</span>
+</button>
