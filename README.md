@@ -2,7 +2,7 @@
 
 ## Description
 Web app for managing accounts for various applications set by admins.
-The app uses a NestJs backend with a PostgreSQL database to store accounts, applications and users.
+The app uses a NestJs [backend](https://github.com/app-alex/nestjs-account-management) with a PostgreSQL database to store accounts, applications and users.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
